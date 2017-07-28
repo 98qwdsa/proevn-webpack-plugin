@@ -1,0 +1,106 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'C:\\Users\\chunsen.zhao\\work\\vue\\build\\proevn-webpack-plugin',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\chunsen.zhao\AppData\Roaming\npm-cache\proevn-webpack-plugin\1.0.0\package.tgz not in flight; packing
+9 verbose correctMkdir C:\Users\chunsen.zhao\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+10 info lifecycle proevn-webpack-plugin@1.0.0~prepublish: proevn-webpack-plugin@1.0.0
+11 silly lifecycle proevn-webpack-plugin@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ 'C:\\Users\\chunsen.zhao\\AppData\\Roaming\\npm-cache\\proevn-webpack-plugin\\1.0.0\\package.tgz',
+12 verbose tar pack   'C:\\Users\\chunsen.zhao\\work\\vue\\build\\proevn-webpack-plugin' ]
+13 verbose tarball C:\Users\chunsen.zhao\AppData\Roaming\npm-cache\proevn-webpack-plugin\1.0.0\package.tgz
+14 verbose folder C:\Users\chunsen.zhao\work\vue\build\proevn-webpack-plugin
+15 verbose addLocalTarball adding from inside cache C:\Users\chunsen.zhao\AppData\Roaming\npm-cache\proevn-webpack-plugin\1.0.0\package.tgz
+16 verbose correctMkdir C:\Users\chunsen.zhao\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+17 silly cache afterAdd proevn-webpack-plugin@1.0.0
+18 verbose afterAdd C:\Users\chunsen.zhao\AppData\Roaming\npm-cache\proevn-webpack-plugin\1.0.0\package\package.json not in flight; writing
+19 verbose correctMkdir C:\Users\chunsen.zhao\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+20 verbose afterAdd C:\Users\chunsen.zhao\AppData\Roaming\npm-cache\proevn-webpack-plugin\1.0.0\package\package.json written
+21 silly publish { name: 'proevn-webpack-plugin',
+21 silly publish   version: '1.0.0',
+21 silly publish   description: 'modify some environment variables in the webpack,s compilation process',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/98qwdsa/proevn-webpack-plugin.git' },
+21 silly publish   keywords: [ 'environment variables' ],
+21 silly publish   author: { name: 'chunsen.zhao' },
+21 silly publish   license: 'ISC',
+21 silly publish   bugs: { url: 'https://github.com/98qwdsa/proevn-webpack-plugin/issues' },
+21 silly publish   homepage: 'https://github.com/98qwdsa/proevn-webpack-plugin#readme',
+21 silly publish   dependencies:
+21 silly publish    { 'iconv-lite': '^0.4.18',
+21 silly publish      lodash: '^4.17.4',
+21 silly publish      minimist: '^1.2.0' },
+21 silly publish   readme: '# proevn-webpack-plugin\r\n\r\nmodify some environment variables in the webpack,s compilation process\r\n\r\n# example\r\n\r\n``` javascript\r\n// webpack.prod.conf.js\r\nvar proevn = require(\'proevn-webpack-plugin\')\r\nplugins: [\r\n    new proevn({\r\n      target: path.join(__dirname, \'../src/config.js\')\r\n    })\r\n]\r\n```\r\n\r\n``` javascript\r\n// conf.js\r\nvar EVN = \'sit\'\r\nvar TEST = \'aaa\'\r\nexport {\r\n  EVN,\r\n  TEST\r\n}\r\n```\r\n\r\n``` javascript\r\n// package.json\r\n"scripts": {  \r\n    "build": "node build/build.js --EVN pro"\r\n}\r\n```\r\n\r\n``` javascript\r\n$ npm run dev\r\n// or\r\n$ npm run dev -- --TEST sit\r\n//or \r\n$ node build/build.js --TEST sit\r\n```\r\n\r\n###berfor webpack compiler.plugin(\'after-emit\') \r\n``` javascript\r\n// conf.js\r\nvar EVN = \'pro\'\r\nvar TEST = \'sit\'\r\nexport {\r\n  EVN,\r\n  TEST\r\n}\r\n```\r\n\r\n###after webpack compiler.plugin(\'after-emit\') \r\n``` javascript\r\n// conf.js\r\nvar EVN = \'sit\'\r\nvar TEST = \'aaa\'\r\nexport {\r\n  EVN,\r\n  TEST\r\n}\r\n```\r\n\r\n\r\n# install\r\n\r\nWith [npm](https://npmjs.org) do:\r\n\r\n```\r\nnpm install \'proevn-webpack-plugin\r\n```\r\n\r\n# license\r\n\r\nMIT\r\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '591ef7573b3226afba7e217503b1f8efe6744094',
+21 silly publish   _id: 'proevn-webpack-plugin@1.0.0',
+21 silly publish   _shasum: 'dad2df2f63573ca69d49b97dea8d88a18b7aad0c',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name proevn-webpack-plugin
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npm.taobao.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'proevn-webpack-plugin',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'proevn-webpack-plugin',
+26 silly mapToRegistry   name: 'proevn-webpack-plugin',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npm.taobao.org/proevn-webpack-plugin
+28 verbose publish registryBase https://registry.npm.taobao.org/
+29 silly publish uploading C:\Users\chunsen.zhao\AppData\Roaming\npm-cache\proevn-webpack-plugin\1.0.0\package.tgz
+30 verbose request uri https://registry.npm.taobao.org/proevn-webpack-plugin
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 17:40:30
+33 verbose request id 1c07179376bdad0a
+34 http request PUT https://registry.npm.taobao.org/proevn-webpack-plugin
+35 http 403 https://registry.npm.taobao.org/proevn-webpack-plugin
+36 verbose headers { date: 'Thu, 27 Jul 2017 09:40:16 GMT',
+36 verbose headers   'content-type': 'application/json; charset=utf-8',
+36 verbose headers   'content-length': '87',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'x-current-requests': '1',
+36 verbose headers   'x-readtime': '13' }
+37 verbose request invalidating C:\Users\chunsen.zhao\AppData\Roaming\npm-cache\registry.npm.taobao.org\proevn-webpack-plugin on PUT
+38 error publish Failed PUT 403
+39 verbose stack Error: no_perms Private mode enable, only admin can publish this module: proevn-webpack-plugin
+39 verbose stack     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+39 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+39 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+39 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+39 verbose stack     at emitTwo (events.js:106:13)
+39 verbose stack     at Request.emit (events.js:191:7)
+39 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+39 verbose stack     at emitOne (events.js:96:13)
+39 verbose stack     at Request.emit (events.js:188:7)
+39 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:969:12)
+40 verbose statusCode 403
+41 verbose pkgid proevn-webpack-plugin
+42 verbose cwd C:\Users\chunsen.zhao\work\vue\build\proevn-webpack-plugin
+43 error Windows_NT 6.1.7601
+44 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+45 error node v6.10.2
+46 error npm  v3.10.10
+47 error code E403
+48 error no_perms Private mode enable, only admin can publish this module: proevn-webpack-plugin
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]
