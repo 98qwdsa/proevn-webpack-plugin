@@ -14,7 +14,7 @@ function proEvnPlugin(options) {
 }
 
 proEvnPlugin.prototype.apply = function(compiler) {
-    var opt = this.options
+    var opt = this.options;
     var write = {};
     if (opt.target === '') {
         console.error('ERR: options need target params');
@@ -32,9 +32,15 @@ proEvnPlugin.prototype.apply = function(compiler) {
                     // utf-8  
                     var str = iconv.decode(data, 'utf-8');
                     _.forEach(o, function(v, k) {
+                        if (_.isArray(v)) {
+                            v = _.last(v);
+                        }
                         var reg = new RegExp('(\\s{1}' + k + '\\s{1}=\\s+[\'|\"]+)(\\w+)([\'|\"]+;?)');
-                         write[k] = _.trim(str.match(reg)[0].split('=')[1].replace(/(\w+)/,'$1'));
-                        str = str.replace(reg, '$1'+v+'$3'); 
+                        var matchs = str.match(reg);
+                        if (matchs) {
+                            write[k] = _.trim(matchs[0].split('=')[1].replace(/(\w+)/,'$1'));
+                            str = str.replace(reg, '$1'+v+'$3'); 
+                        }
                     });
 
                     fs.writeFile(opt.target, str,function(err){
@@ -68,7 +74,7 @@ proEvnPlugin.prototype.apply = function(compiler) {
                     var str = iconv.decode(data, 'utf-8');
                     _.forEach(write, function(v, k) {
                         var reg = new RegExp('(\\s{1}' + k + '\\s{1}=\\s+)[\'|\"]+(\\w+)[\'|\"]+(;?)');
-                        str = str.replace(reg, '$1'+v+'$3'); 
+                        str = str.replace(reg, '$1' +v); 
                     });
 
                     console.log(str);
